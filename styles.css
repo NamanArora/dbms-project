@@ -1,0 +1,99 @@
+body{
+    background-image: url("beck.jpg");
+    background-size: 100% auto;
+    margin: 0;
+    padding: 0;
+}
+
+form{
+
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 90px;;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.menubar
+{
+    background-color: rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.menubar li
+{
+    float: right;
+    padding:5px;
+    color: white;
+    text-align: center;
+    list-style: none;
+    display: inline;
+
+    height: 10px;
+}
+.form
+{
+    height: 25px;
+    font-size: medium;
+    margin-bottom: 15px;
+    outline: none;
+    width:300px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.formheading
+{
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom-color: red;
+    border-bottom-style:solid;
+    padding-top: 2px;
+    margin-bottom: 40px;
+    color: white;
+}
+.heading
+{
+    font-family: Verdana;
+
+    font-weight: bold;
+    padding:5px;
+    background-color: transparent;
+    color: white;
+}
+
+
+input[type='submit']:hover
+{
+    background-color: blue;
+}
+
+input[type='submit']
+{
+    float: right;
+    margin-right: 20px;
+    background-color: deepskyblue;
+    color: white;
+    width: 5em;
+    height:25px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#newaccount
+{
+    margin-top:50px;
+    font-size: 18px;
+    color: white;
+
+}
