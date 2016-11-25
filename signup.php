@@ -1,11 +1,10 @@
 <?php
 
-
-
 $db="test";
-$table="user_log";
+$table="users";
 $fname= $_POST['fname'];
 $fpass = $_POST['fpass'];
+$femail = $_POST['email'];
 
 function parameterCreator()
 {
@@ -23,26 +22,26 @@ function parameterCreator()
     $generated .= ")";
     return $generated;
 }
+
 $con = mysqli_connect('localhost','root','');
 $db = mysqli_select_db($con,$db);
+
 if($con)
 {
-    echo nl2br("\nConnected!");
-    //$query = "INSERT INTO `user_log` (`username`, `password`) VALUES".parameterCreator($fname,$fpass);
-    $query = "SELECT * FROM USER_LOG";
+
+    $query = "INSERT INTO `users` (`username`, `password`, `email_id`) VALUES".parameterCreator($fname,$fpass,$femail);
+    //echo $query;
     $result= mysqli_query($con,$query);
-    if(mysqli_num_rows($result) > 0)
-    {
-        echo nl2br("\n"."Succesful query!");
-        while($a=mysqli_fetch_array($result))
-            echo nl2br("Username: ".$a['username']." "."Password: ".$a['password']."\n");
-
-    }
+    if($result == false)
+        echo mysqli_error($con);
     else
-        echo "No result! :(";
+    {
+        echo "<script language=\"JavaScript\">\n";
+        echo "alert('Record Added.');\n";
+        echo "window.location='home.html'";
+        echo "</script>";
+    }
 
-}else
-{
-    print("Not connected!");
 }
-
+else
+    print("Error connecting! Contact developer.");
